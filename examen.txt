@@ -1,0 +1,139 @@
+CURSO INTRODUCCION VUE.JS 3
+¡Felicitaciones por terminar el Curso de Vue.js 3 One Piece! Aprendiste qué es la reactividad, la implementaste en tu propio miniframework y descubriste con claridad y a bastante profundidad cómo funciona Vue.js por dentro.
+
+Durante el curso realizamos varios ejercicios y construimos un proyecto muy interesante. Ahora estás lista o listo para dar el siguiente paso y completar un reto final: PlatziCommerce Reloaded, el frontend de un ecommerce profesional que podrás incluir en tu portafolio.
+
+Debes seguir las siguientes instrucciones:
+
+Busca un diseño maravilloso de ecommerce. Puedes buscarlos en plataformas como Dribbble o hacer equipo con algunx estudiante en la Escuela de Product Design.
+El sitio web debe tener búsqueda de productos, carrito de compras, la posibilidad de reducir el precio con cupones de descuento y filtros (por precio y categoría, por ejemplo).
+También debes encargarte de que el sitio sea responsive y mobile first.
+Puntos extra si integras componentes de terceros para lograr alguna funcionalidad extra en tu ecommerce (como gráficas de visualización de datos, por ejemplo).
+Cuando lo termines, quiero invitarte a que compartas tu resultado en los comentarios y nunca pares de aprender Vue.js. En la Carrera de Desarrollo Web Frontend con Vue encontrarás muchos más cursos para desarrollar proyectos increíbles, seguir dominando Vue.js e integrarlo con las herramientas más importantes del desarrollo web.
+
+EXAMEN
+- ¿Qué es un Proxy en JavaScript? BUENA
+SISTEMA DE TRAMPAS
+
+- ¿Qué es Reflect? BUENA
+EL SISTEMA QUE REFLEJA LOS COMPORTAMIENTOS DE TRAMPAS
+
+- ¿Cómo podemos crear referencias reactivas en el Composition API basándonos en un objeto de data() con las siguientes propiedades?
+{ name: ""Samuel"", birth_year:  1996 } BUENA
+CAPTURA1
+
+- Sabemos que la reactividad debe ser Responsiva, esto quiere decir que debe ser:BUENA
+ESCALABLE Y RESILIENTE
+
+
+
+- ¿Cuál es la manera correcta de agregar un controlador de eventos? BUENA
+@CLICK=""
+
+- ¿Qué es un track? BUENA
+ENCARGADOS DE SEGUIR LAS DEPENDENCIAS Y EFECTOS
+
+- ¿Se puede traer información desde una API en el ciclo de vida mounted()? BUENA
+SI
+
+- La capa de Declarative Rendering se encarga de: BUENA
+CONECTA LA INFO Y LA PRESEN
+
+- El objeto que retorna la opción de data() se convierte en:BUENA
+UN PROXY
+
+
+- ¿Qué es un effect? BUENA
+TODO LO QUE EFECTA UN CAMBIO
+
+- ¿Qué es un trigger? BUENA
+-----------
+
+- ¿Qué es la reactividad? BUENA
+PARADIGMA
+
+
+
+¿Qué es el Virtual DOM en JavaScript? BUUENA
+REPRESENTACION DEL DOM
+
+- Vue es progresivo porque... BUENA
+TODAS SON CORRECTAS
+
+- ¿Qué es el Composition API? BUENA
+-----------
+
+- La capa de Componentes nos sirve para: BUENA
+ENCAPSULAR, PRESENTACION Y LOGICA
+
+- Vue es un framework porque... BUENA
+CONJUNTO DE HERRAMIENTAS QUE TRABAJA REGLAS
+
+- ¿Cuál es la manera correcta de agregar un atributo dinámico? BUENA
+<img :src="image" />
+
+
+- Teniendo una referencia reactiva birth_year, ¿cómo podemos calcular la edad actual en el Composition API? BUENA
+CONST EDAD= 2020 - BIRTH_YEAR.VALUE
+
+- Si queremos agrupar estados reactivos de manera más sencilla en el Composition API lo hacemos como: BUENA
+REACTIVE
+
+
+- El ciclo de vida created() quiere decir que: BUENA
+Toda la información reactiva ya esta lista, pero no se ha montado aun el componente en el DOM.
+
+
+- Teniendo una aplicación de Vue creada como const app = createApp({}), ¿cómo creamos un componente con el nombre de “perfil”? BUENA
+APP.COMPONENT("PERFIL",{})
+
+- En el Composition API, ¿cómo podría ejecutar un ciclo de vida updated()? BUENA
+ONUPDATE(FUNCTION(){})
+
+- Teniendo un estado const state = reactive({ name: "Samuel", nick: "iosamuel", socials: {twitter: "iosamuel", twitch: "iosamuel"} }) en el Composition API, ¿cómo puedo crear un observador para las propiedades name y socials? BUENA
+watch(() => state.name, function() {}) watch(state.socials, function() {})
+
+- ¿Qué es el Options API? BUENA
+-----------
+
+¿Cuáles son los 3 puntos para aplicar la programación reactiva? BUENA
+--------------
+
+- En el siguiente código de un Proxy, ¿qué se imprime en consola? BUENA
+function saludo(salute, nombre) {
+    console.log(`${salute} ${nombre}!`)
+}
+const saludosINTL = new Proxy(saludo, {
+    apply(target) {
+        return target("Hello", "Samuel");
+    }
+})
+saludosINTL("Hola", "mundo");
+Hello Samuel!
+
+- Determina cuáles son las dependencias dinámicas en el siguiente código:
+Hola {{ name }}, tu edad es <span v-text=""2020 - birth_year""></span> CAMBIAR
+name y birth_year
+
+
+
+- En el siguiente código de un componente simple, ¿cuál seria la informacion mostrada en consola?
+setup() {
+    onMounted(() => {
+        setTimeout(() => {
+            console.log(""mounted"")
+        }, 100)
+    })
+
+    console.log(""setup"");
+
+    onUpdated(() => {
+        console.log(""updated"");
+    })
+} CAMBIAR
+SETUP (ENTER) UPDATED (ENTER) MOUNTED
+mounted (enter) setup
+mounted (enter) setup (enter) updated
+
+- Para poder tener un sistema reactivo debemos tener un sistema: CAMBIAR
+BASADO EN ESCALABILIDAD - OBSERVADORES - Basado en real-time.
